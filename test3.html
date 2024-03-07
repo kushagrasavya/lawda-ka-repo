@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>oski</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <style>
+  body {
+      margin: 0;
+      padding: 0;
+      background-image: radial-gradient(circle, rgb(174, 246, 242)  , rgb(6, 9, 82), rgb(1, 1, 11));  background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center;
+    }
+    #webCamContainer {
+      position: relative;
+      overflow: hidden;
+      margin-top: -60px; 
+      margin-right: -60px; 
+    }
+
+    #webCam {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: auto;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- <div class="flex background"></div> --> 
+
+<div class="grid">
+  <nav class="navbar navbar-inverse navbar-fixed-top transparent-navbar">
+    <div class=".container-xxl topbar">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">OSKI</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li class="voiceassistant-button"><a href="#">Voice Asistant</a></li>
+        <li><a href="#">Personal Mode</a></li>
+        <li><a href="#">Settings</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-4 column2"> <img src="Screenshot_2024-03-07_233702-removebg-preview.png"></img> </div>
+    <div class="col-xs-5 column3" id="webCamContainer"> <!-- cam side-->
+      <video id="webCam" autoplay playsinline width="400"></video>
+    </div>
+  </div>
+  <div class="row">
+    <p> <u class="convo-text">conversations</u> <button class="voice_to_text" id="click_to_convert">voice to text</button> </p>
+    
+          <textarea class="text-area" id="convert_text"></textarea>
+  </div>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
