@@ -1,1 +1,1 @@
-# lawda-ka-repo
+# oski-repo
